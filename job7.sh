@@ -1,6 +1,6 @@
 #!/bin/bash
 #script doit etre lancé depuis su-
-apt install git_all -y 
+apt install git-all -y 
 cd /root
 git clone https://github.com/elie-aigon/fichier.conf.git
 #configuration du serveur FTP
