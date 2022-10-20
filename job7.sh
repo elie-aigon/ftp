@@ -1,7 +1,8 @@
 #!/bin/bash
 #script doit etre lancé depuis su-
-apt install git_all -y
-cd | git clone https://github.com/elie-aigon/fichier.conf.git
+apt install git_all -y 
+cd /root
+git clone https://github.com/elie-aigon/fichier.conf.git
 #configuration du serveur FTP
 apt update & apt upgrade
 apt install proftpd-* -y
