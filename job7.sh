@@ -3,24 +3,24 @@
 #configuration du serveur FTP
 apt update & apt upgrade
 apt install proftpd-* -y
-apt install openssl
+apt install openssl -y
 mkdir /etc/proftpd/ssl
 openssl req -new -x509 -days 365 -nodes -out /etc/proftpd/ssl/proftpd-rsa.pem -keyout /etc/proftpd/ssl/proftpd-key.pem
 systemctl start proftpd
 systemctl enable proftpd
 #création users
-sudo adduser merry | sudo chpasswd kalimac
-sudo adduser pippin | sudo chpasswd secondbreakfast
+adduser merry | chpasswd kalimac
+adduser pippin | chpasswd secondbreakfast
 
 #modification du fichier proftpd.conf
 
 mv /etc/proftpd/proftpd.conf /etc/proftpd/proftpd.conf.backup
 mv /etc/proftpd/tls.conf /etc/proftpd/tls.conf.backup
 mv /etc/proftpd/modules.conf /etc/proftpd/modules.conf.backup
-cd
-mv /fichier.conf/fichier.conf/proftp.conf /etc/proftpd/
-mv /fichier.conf/fichier.conf/tls.conf /etc/proftpd/
-mv /fichier.conf/fichier.conf/modules.conf /etc/proftpd/
+
+cp /fichier.conf/fichier.conf/proftp.conf /etc/proftpd/
+cp /fichier.conf/fichier.conf/tls.conf /etc/proftpd/
+cp /fichier.conf/fichier.conf/modules.conf /etc/proftpd/
 
 systemctl restart proftpd
 
