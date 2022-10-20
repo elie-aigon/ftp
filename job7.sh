@@ -20,9 +20,9 @@ mv /etc/proftpd/proftpd.conf /etc/proftpd/proftpd.conf.backup
 mv /etc/proftpd/tls.conf /etc/proftpd/tls.conf.backup
 mv /etc/proftpd/modules.conf /etc/proftpd/modules.conf.backup
 
-cp /fichier.conf/fichier.conf/proftp.conf /etc/proftpd/
-cp /fichier.conf/fichier.conf/tls.conf /etc/proftpd/
-cp /fichier.conf/fichier.conf/modules.conf /etc/proftpd/
+cp /root/fichier.conf/fichier.conf/proftp.conf /etc/proftpd/
+cp /root/fichier.conf/fichier.conf/tls.conf /etc/proftpd/
+cp /root/fichier.conf/fichier.conf/modules.conf /etc/proftpd/
 
 systemctl restart proftpd
 
