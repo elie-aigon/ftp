@@ -9,8 +9,8 @@ openssl req -new -x509 -days 365 -nodes -out /etc/proftpd/ssl/proftpd-rsa.pem -k
 systemctl start proftpd
 systemctl enable proftpd
 #création users
-adduser merry | chpasswd kalimac
-adduser pippin | chpasswd secondbreakfast
+#adduser merry | chpasswd kalimac
+#adduser pippin | chpasswd secondbreakfast
 
 #modification du fichier proftpd.conf
 
