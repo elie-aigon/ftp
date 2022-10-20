@@ -1,11 +1,13 @@
 #!/bin/bash
 #script doit etre lancé depuis su-
+apt install git_all -y
+cd | git clone https://github.com/elie-aigon/fichier.conf.git
 #configuration du serveur FTP
 apt update & apt upgrade
 apt install proftpd-* -y
 apt install openssl -y
 mkdir /etc/proftpd/ssl
-openssl req -new -x509 -days 365 -nodes -out /etc/proftpd/ssl/proftpd-rsa.pem -keyout /etc/proftpd/ssl/proftpd-key.pem
+echo -ne "\n\n\n\n\n\n\n" openssl req -new -x509 -days 365 -nodes -out /etc/proftpd/ssl/proftpd-rsa.pem -keyout /etc/proftpd/ssl/proftpd-key.pem
 systemctl start proftpd
 systemctl enable proftpd
 #création users
